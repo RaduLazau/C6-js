@@ -1,17 +1,20 @@
 class Student {
-    constructor (name, phone_number, age, hobbies) {
-        console.log ("Created Student", name)
-        this.name = name;
-        this.phone_number = phone_number;
-        this.age = age;
-        this.hobbies = hobbies;
+    constructor (Name, Number, age) {
+        this.Name = Name; //string
+        this.Number = Number; //string
+        this.age = age; //number
+        this.hobbies = []; //array
     }
 
-    get.hobbies() {
-        return 'hobbies';
+    setHobbies (hobbies) {
+        this.hobbies = hobbies; //setter
+    }
+
+    getHobbies () {
+        return this.hobbies; //getter
+    }
+// greetings return salute name and age dynamic
+    greetings () {
+        return `Hello, my name is ${this.Name} and I am ${this.age} years old.`
     }
 }
-
-var Student1 = new Student ("Sharleen Rollo", "012345678", "18", "Tenis");
-
-console.log (Student1.hobbies);
